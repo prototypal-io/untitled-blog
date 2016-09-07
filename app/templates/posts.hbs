@@ -1,0 +1,16 @@
+{{#each model as |post|}}
+  <article>
+    <header>
+      <h2>{{link-to post.title "post" post.id}}</h2>
+
+      <p>
+        Posted by {{post.author.fullName}} on
+        <time datetime="{{moment-format post.publishedAt "YYYY-MM-DD"}}">
+          {{moment-format post.publishedAt "MMMM D, YYYY"}}
+        </time>
+      </p>
+    </header>
+
+    <p>{{post.summary}}</p>
+  </article>
+{{/each}}
