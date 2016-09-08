@@ -1,0 +1,10 @@
+@mixin post-list__item() {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+}
+
+.post-list {
+  &__item {
+    @include post-list__item();
+  }
+}

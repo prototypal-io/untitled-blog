@@ -1,0 +1,39 @@
+@mixin post-preview() {
+  margin-bottom: 30px;
+}
+
+@mixin post-preview__title() {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-family: $header-font-family;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+@mixin post-preview__subtitle() {
+  margin: 0 0 10px;
+  font-family: $header-font-family;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+@mixin post-preview__meta() {
+  margin-bottom: 30px;
+  color: #777777;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.post-preview {
+  &__title {
+    @include post-preview__title();
+  }
+
+  &__subtitle {
+    @include post-preview__subtitle();
+  }
+
+  &__meta {
+    @include post-preview__meta();
+  }
+}

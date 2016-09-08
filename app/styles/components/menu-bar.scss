@@ -1,0 +1,55 @@
+@mixin menu-bar() {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin menu-bar__section() {
+  display: flex;
+  align-items: center;
+
+  &--right {
+    margin-left: auto;
+  }
+}
+
+@mixin menu-bar__item(
+  $font-size: 12px,
+  $text-transform: uppercase,
+  $padding: 20px
+) {
+  > a {
+    display: block;
+    padding: $padding;
+    font-size: $font-size;
+    font-family: $header-font-family;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-transform: $text-transform;
+    letter-spacing: 1px;
+
+    &:hover {
+      color: rgba(255,255,255,.8);
+    }
+  }
+}
+
+.menu-bar {
+  @include menu-bar();
+
+  &__section {
+    @include menu-bar__section();
+  }
+
+  &__item {
+    @include menu-bar__item();
+  }
+
+  &__brand {
+    @include menu-bar__item(
+      $font-size: 18px,
+      $text-transform: none,
+      $padding: (0 20px)
+    );
+  }
+}
+

@@ -1,14 +1,24 @@
 <article>
-  <header>
-    <h1>{{model.title}}</h1>
+  <header class="post__header">
+    <div class="wrapper">
+      <h1 class="post__title">
+        {{model.title}}
+      </h1>
 
-    <p>
-      Posted by {{model.author.fullName}} on
-      <time datetime="{{moment-format post.publishedAt "YYYY-MM-DD"}}">
-        {{moment-format post.publishedAt "MMMM D, YYYY"}}
-      </time>
-    </p>
+      <h2 class="post__subtitle">
+        {{model.summary}}
+      </h2>
+
+      <p class="post__meta">
+        Posted by {{link-to model.author.fullName "posts"}} on
+        <time datetime="{{moment-format model.publishedAt "YYYY-MM-DD"}}">
+          {{moment-format model.publishedAt "MMMM D, YYYY"}}
+        </time>
+      </p>
+    </div>
   </header>
 
-  {{{model.body}}}
+  <div class="wrapper">
+    {{{model.body}}}
+  </div>
 </article>

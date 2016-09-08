@@ -1,0 +1,42 @@
+@mixin page-header(
+  $text-align: center,
+  $padding: (150px 0)
+) {
+  margin-bottom: 50px;
+  padding: $padding;
+  background: $dark-gray;
+  text-align: $text-align;
+}
+
+@mixin page-header__title() {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: $header-font-family;
+  font-weight: 800;
+  font-size: 55px;
+  line-height: 1.1;
+  color: #FFFFFF;
+}
+
+@mixin page-header__subtitle(
+  $font-weight: 300,
+  $font-size: 30px
+) {
+  margin: 10px 0 30px;
+  font-family: $header-font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: #FFFFFF;
+}
+
+.page-header {
+  @include page-header();
+
+  &__title {
+    @include page-header__title();
+  }
+
+  &__subtitle {
+    @include page-header__subtitle();
+  }
+}

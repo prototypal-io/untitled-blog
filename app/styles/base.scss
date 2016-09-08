@@ -1,0 +1,24 @@
+::selection {
+  color: #FFFFFF;
+  text-shadow: none;
+  background: $turquoise;
+}
+
+body {
+  font-family: $copy-font-family;
+  font-size: $copy-font-size;
+}
+
+a {
+  text-decoration: none;
+  color: $link-color;
+
+  &:hover, &:active {
+    color: $link-color-hover;
+  }
+}
+
+p {
+  line-height: 1.5;
+  margin: 30px 0;
+}

@@ -1,1 +1,80 @@
 @import "normalize";
+
+@import "variables";
+@import "mixins";
+@import "base";
+
+@import "components/menu-bar";
+@import "components/page-header";
+@import "components/post-list";
+@import "components/post-preview";
+
+.wrapper {
+  @include clearfix();
+
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+.footer {
+  border-top: 1px solid #eee;
+  padding: 50px 0 65px;
+  padding-top: 70px;
+  text-align: center;
+}
+
+.footer__social-link {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.footer__copyright {
+  font-size: 14px;
+  color: #777777;
+}
+
+.post__header {
+  margin-bottom: 50px;
+  padding: 150px 0;
+  background: $dark-gray;
+}
+
+.post__title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: $header-font-family;
+  font-weight: 800;
+  font-size: 55px;
+  line-height: 1.1;
+  color: #FFFFFF;
+}
+
+.post__subtitle {
+  margin: 10px 0 30px;
+  font-family: $header-font-family;
+  font-size: 30px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.post__meta {
+  margin: 0;
+  color: #777777;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #FFFFFF;
+
+  a {
+    color: #FFFFFF;
+  }
+}
