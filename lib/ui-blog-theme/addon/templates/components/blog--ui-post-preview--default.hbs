@@ -1,14 +1,14 @@
-<article class="post-preview">
+<article {{ui-root}}>
   <header>
-    <h2 class="post-preview__title">
+    <h2 class="title">
       {{link-to post.title "post" post.id class="post-preview__title-link"}}
     </h2>
 
-    <h3 class="post-preview__subtitle">
+    <h3 class="subtitle">
       {{post.summary}}
     </h3>
 
-    <p class="post-preview__meta">
+    <p class="meta">
       Posted by {{link-to post.author.fullName "posts"}} on
       <time datetime="{{moment-format post.publishedAt "YYYY-MM-DD"}}">
         {{moment-format post.publishedAt "MMMM D, YYYY"}}

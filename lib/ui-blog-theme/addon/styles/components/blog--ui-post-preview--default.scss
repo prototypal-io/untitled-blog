@@ -1,8 +1,4 @@
-@mixin post-preview() {
-  margin-bottom: 30px;
-}
-
-@mixin post-preview__title() {
+@mixin post-preview--title() {
   margin-top: 30px;
   margin-bottom: 10px;
   font-family: $header-font-family;
@@ -10,30 +6,33 @@
   font-weight: 800;
 }
 
-@mixin post-preview__subtitle() {
+@mixin post-preview--subtitle() {
   margin: 0 0 10px;
   font-family: $header-font-family;
   font-size: 24px;
   font-weight: 300;
 }
 
-@mixin post-preview__meta() {
+@mixin post-preview--meta() {
   margin-bottom: 30px;
   color: #777777;
   font-size: 18px;
   font-style: italic;
 }
 
-.post-preview {
-  &__title {
-    @include post-preview__title();
+@component() {
+  margin-bottom: 30px;
+
+  &--title {
+    @include post-preview--title();
   }
 
-  &__subtitle {
-    @include post-preview__subtitle();
+  &--subtitle {
+    @include post-preview--subtitle();
   }
 
-  &__meta {
+  &--meta {
     @include post-preview__meta();
   }
 }
+

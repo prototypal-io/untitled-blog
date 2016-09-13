@@ -1,0 +1,9 @@
+{
+  "name": "ui-blog-theme",
+  "keywords": [
+    "ember-addon"
+  ],
+  "dependencies": {
+    "ember-cli-htmlbars": "^1.1.0"
+  }
+}

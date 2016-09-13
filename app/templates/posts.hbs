@@ -1,21 +1,5 @@
-<div class="page-header">
-  <div class="wrapper">
-    <h1 class="page-header__title">
-      Untitled Blog
-    </h1>
-
-    <h2 class="page-header__subtitle">
-      A Blog to Showcase Themes
-    </h2>
-  </div>
-</div>
+{{blog--ui-page-header--default}}
 
 <div class="wrapper">
-  <div class="post-list">
-    {{#each model as |post|}}
-      <div class="post-list__item">
-        {{post-preview post=post}}
-      </div>
-    {{/each}}
-  </div>
+  {{blog--ui-posts-list--default posts=model}}
 </div>

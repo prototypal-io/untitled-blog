@@ -1,12 +1,4 @@
-@mixin page-header(
-  $text-align: center,
-  $padding: (150px 0)
-) {
-  margin-bottom: 50px;
-  padding: $padding;
-  background: $dark-gray;
-  text-align: $text-align;
-}
+@import "../mixins/wrapper";
 
 @mixin page-header__title() {
   margin-top: 20px;
@@ -29,14 +21,24 @@
   color: #FFFFFF;
 }
 
-.page-header {
-  @include page-header();
+@component(
+  $text-align: center,
+  $padding: (150px 0)
+) {
+  margin-bottom: 50px;
+  padding: $padding;
+  background: $dark-gray;
+  text-align: $text-align;
 
-  &__title {
+  &--wrapper {
+    @include wrapper();
+  }
+
+  &--title {
     @include page-header__title();
   }
 
-  &__subtitle {
+  &--subtitle {
     @include page-header__subtitle();
   }
 }

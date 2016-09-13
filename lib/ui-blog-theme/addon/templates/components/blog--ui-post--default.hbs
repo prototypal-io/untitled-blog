@@ -1,0 +1,24 @@
+<article {{ui-root}}>
+  <header class="header">
+    <div class="wrapper">
+      <h1 class="title">
+        {{post.title}}
+      </h1>
+
+      <h2 class="subtitle">
+        {{post.summary}}
+      </h2>
+
+      <p class="meta">
+        Posted by {{link-to post.author.fullName "posts"}} on
+        <time datetime="{{moment-format model.publishedAt "YYYY-MM-DD"}}">
+          {{moment-format post.publishedAt "MMMM D, YYYY"}}
+        </time>
+      </p>
+    </div>
+  </header>
+
+  <div class="wrapper">
+    {{{post.body}}}
+  </div>
+</article>

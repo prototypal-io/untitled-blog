@@ -1,0 +1,10 @@
+@import "./clearfix";
+
+@mixin wrapper(
+  $max-width: 860px
+) {
+  @include clearfix();
+
+  max-width: $max-width;
+  margin: 0 auto;
+}

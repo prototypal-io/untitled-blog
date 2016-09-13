@@ -1,0 +1,45 @@
+@import "../mixins/wrapper";
+
+@component() {
+  &--wrapper {
+    @include wrapper();
+  }
+
+  &--header {
+    margin-bottom: 50px;
+    padding: 150px 0;
+    background: $dark-gray;
+  }
+
+  &--title {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: $header-font-family;
+    font-weight: 800;
+    font-size: 55px;
+    line-height: 1.1;
+    color: #FFFFFF;
+  }
+
+  &--subtitle {
+    margin: 10px 0 30px;
+    font-family: $header-font-family;
+    font-size: 30px;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+
+  &--meta {
+    margin: 0;
+    color: #777777;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.1;
+    color: #FFFFFF;
+
+    a {
+      color: #FFFFFF;
+    }
+  }
+}

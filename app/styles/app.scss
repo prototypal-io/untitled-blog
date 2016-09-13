@@ -1,19 +1,36 @@
-@import "normalize";
+// @import "normalize";
 
 @import "variables";
-@import "mixins";
 @import "base";
 
-@import "components/menu-bar";
-@import "components/page-header";
-@import "components/post-list";
-@import "components/post-preview";
+@import "ui-blog-theme";
 
 .wrapper {
-  @include clearfix();
+  @include wrapper();
+}
 
-  max-width: 860px;
-  margin: 0 auto;
+.blog {
+  @include ui-blog-theme(
+    $page-background: #f5f8f9,
+    $content-background: #ffffff,
+    $font-color: #303030,
+    $default-color: purple,
+    $primary-color: green,
+    $focus-color: #0090ff,
+    $error-color: #ff0000,
+
+    $border-radius: 0.3em,
+
+    $heading-font: ("Helvetica", "sans-serif"),
+    $copy-font: ("Helvetica", "sans-serif"),
+    $component-font: ("Helvetica", "sans-serif"),
+
+    $font-size--x-small: 0.6rem,
+    $font-size--small: 0.8rem,
+    $font-size--medium: 1rem,
+    $font-size--large: 1.3rem,
+    $font-size--x-large: 1.6rem
+  );
 }
 
 .nav {
@@ -22,59 +39,4 @@
   left: 0;
   width: 100%;
   z-index: 3;
-}
-
-.footer {
-  border-top: 1px solid #eee;
-  padding: 50px 0 65px;
-  padding-top: 70px;
-  text-align: center;
-}
-
-.footer__social-link {
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.footer__copyright {
-  font-size: 14px;
-  color: #777777;
-}
-
-.post__header {
-  margin-bottom: 50px;
-  padding: 150px 0;
-  background: $dark-gray;
-}
-
-.post__title {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-family: $header-font-family;
-  font-weight: 800;
-  font-size: 55px;
-  line-height: 1.1;
-  color: #FFFFFF;
-}
-
-.post__subtitle {
-  margin: 10px 0 30px;
-  font-family: $header-font-family;
-  font-size: 30px;
-  font-weight: 600;
-  color: #FFFFFF;
-}
-
-.post__meta {
-  margin: 0;
-  color: #777777;
-  font-size: 20px;
-  font-style: italic;
-  font-weight: 300;
-  line-height: 1.1;
-  color: #FFFFFF;
-
-  a {
-    color: #FFFFFF;
-  }
 }
